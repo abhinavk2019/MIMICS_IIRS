@@ -1,0 +1,31 @@
+ MIMICS Version  1. 5
+
+ ****  Forest Canopy Backscatter Model Output File -- Like-polarized Sigma0 Values ****
+ Trunks = T, Primary Branches = T, Secondary Branches = F, 3rd Branches = F, 4th Branches = F, 5th Branches = F, 6th Branches = F, Leaves = F, Needles = T
+ SOIL_SURFACE = T, WATER_SURFACE = F, SNOW_SURFACE = F, ICE_SURFACE = F
+ Dielectric Lookup Tables: Trunk = T, Primary Branch = T, Secondary Branch = T, 3rd Branch = T, 4th Branch = T, 5th Branch = F, 6th Branch = F, Leaf = F, Needle = F, Ground = T
+
+ CONSTITUENT ORIENTATION AND SIZE DISTRIBUTIONS:
+   Trunk Orient PDF =  2, Form = (1/0.85903)*COS(THETA_c)**8     Size PDF =  1, Form = HISTOGRAM DATA                
+  Needle Orient PDF =  1, Form = 0.5*SIN(Theta_n) - Uniform      Size PDF =  0, Form = DEFAULT VALUES                
+ Prim Br Orient PDF = 14, Form = (1.23)*SIN(THETA_c+30)**20      Size PDF =  0, Form = DEFAULT VALUES                
+
+
+ Nesting Data:
+  Variable Number =    1
+    Nesting Order =    1
+  Number of Loops =    2
+
+ Family Number     1
+
+ RADAR Look Angle = 40.0 Degrees, Radar Frequency =   1.25 GHz
+ Canopy Density =  0.11 Trees per square meter, Crown Height =  2.00 meters, Trunk Height =  8.00 meters, Vegetation Temperature =  20.00 degrees C.
+ Surface Dielectric =  5.680 -j 1.130, Soil RMS Roughness =  0.45 cm, Soil Correlation Length =  18.75 cm, Model Type = Physical Optics               
+ Trunk Dielectric = 28.190 -j 7.830 Trunk Diameter = 24.000 cm
+ Needle Gravimetric Moisture = 0.800, Needle Dry Density = 0.377 cm, Needle Density =  0.8300E+03 needles per cubic meter, Needle Diameter = 0.100 cm, Needle Length = 13.001 cm
+ Branch Dielectric = 28.190 -j 7.830, Branch Density =   4.100 branches per cubic meter, Branch Diameter =  0.700 cm, Branch Length =   0.750 meters
+ **** Backscattering Cross Section - Sigma0 (dB) ****
+   Theta       Total Backscatter   Gnd-Crown-Gnd       Crown-Ground       Ground-Crown       Direct Crown       Trunk-Ground       Ground-Trunk       Direct Ground
+   (deg)          VV      HH         VV      HH         VV      HH         VV      HH         VV      HH         VV      HH         VV      HH         VV      HH
+ 40.000        -12.38    -6.77    -41.68   -35.92    -45.73   -25.85    -45.73   -25.85    -17.84   -20.93    -16.86   -10.07    -16.85   -10.07    -51.51   -47.10
+ 45.000        -12.86    -6.38    -44.68   -35.10    -45.25   -25.99    -45.25   -25.99    -18.48   -20.63    -17.28    -9.67    -17.28    -9.67    -59.69   -53.84

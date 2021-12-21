@@ -1,0 +1,44 @@
+        SUBROUTINE STOKES_SUB(SCAT,STOKES)
+        save
+c
+        INTEGER I, J
+        COMPLEX SCAT(2,2)
+        COMPLEX CW1121C,CW1122C,CW1112C,CW2122C,CW1221C,CW1222C,CW1,CW2
+        REAL STOKES(4,4),WORK
+c
+        DO I=1,2
+            DO J=1,2
+                WORK = CABS(SCAT(J,I))
+                STOKES(J,I) = WORK*WORK
+	 END DO
+	END DO
+C
+        CW1121C = SCAT(1,1)*CONJG(SCAT(2,1))
+        CW1222C = SCAT(1,2)*CONJG(SCAT(2,2))
+        CW1112C = SCAT(1,1)*CONJG(SCAT(1,2))
+        CW2122C = SCAT(2,1)*CONJG(SCAT(2,2))
+C
+        CW1122C = SCAT(1,1)*CONJG(SCAT(2,2))
+        CW1221C = SCAT(1,2)*CONJG(SCAT(2,1))
+C
+        CW1 =  CW1122C + CW1221C
+        CW2 =  CW1122C - CW1221C
+C
+        STOKES(3,1) = 2.0*REAL(CW1121C)
+        STOKES(4,1) = 2.0*AIMAG(CW1121C)
+C
+        STOKES(3,2) = 2.0*REAL(CW1222C)
+        STOKES(4,2) = 2.0*AIMAG(CW1222C)
+C
+        STOKES(1,3) = REAL(CW1112C)
+        STOKES(2,3) = REAL(CW2122C)
+        STOKES(3,3) = REAL(CW1)
+        STOKES(4,3) = AIMAG(CW1)
+C
+        STOKES(1,4) = -AIMAG(CW1112C)
+        STOKES(2,4) = -AIMAG(CW2122C)
+        STOKES(3,4) = -AIMAG(CW2)
+        STOKES(4,4) = REAL(CW2)
+C
+        RETURN
+        END

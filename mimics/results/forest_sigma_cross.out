@@ -1,0 +1,31 @@
+ MIMICS Version  1. 5
+
+ ****  Forest Canopy Backscatter Model Output File -- Cross-polarized Sigma0 Values (receive-transmit) ****
+ Trunks = T, Primary Branches = T, Secondary Branches = F, 3rd Branches = F, 4th Branches = F, 5th Branches = F, 6th Branches = F, Leaves = F, Needles = T
+ SOIL_SURFACE = T, WATER_SURFACE = F, SNOW_SURFACE = F, ICE_SURFACE = F
+ Dielectric Lookup Tables: Trunk = T, Primary Branch = T, Secondary Branch = T, 3rd Branch = T, 4th Branch = T, 5th Branch = F, 6th Branch = F, Leaf = F, Needle = F, Ground = T
+
+ CONSTITUENT ORIENTATION AND SIZE DISTRIBUTIONS:
+   Trunk Orient PDF =  2, Form = (1/0.85903)*COS(THETA_c)**8     Size PDF =  1, Form = HISTOGRAM DATA                
+  Needle Orient PDF =  1, Form = 0.5*SIN(Theta_n) - Uniform      Size PDF =  0, Form = DEFAULT VALUES                
+ Prim Br Orient PDF = 14, Form = (1.23)*SIN(THETA_c+30)**20      Size PDF =  0, Form = DEFAULT VALUES                
+
+
+ Nesting Data:
+  Variable Number =    1
+    Nesting Order =    1
+  Number of Loops =    2
+
+ Family Number     1
+
+ RADAR Look Angle = 40.0 Degrees, Radar Frequency =   1.25 GHz
+ Canopy Density =  0.11 Trees per square meter, Crown Height =  2.00 meters, Trunk Height =  8.00 meters, Vegetation Temperature =  20.00 degrees C.
+ Surface Dielectric =  5.680 -j 1.130, Soil RMS Roughness =  0.45 cm, Soil Correlation Length =  18.75 cm, Model Type = Physical Optics               
+ Trunk Dielectric = 28.190 -j 7.830 Trunk Diameter = 24.000 cm
+ Needle Gravimetric Moisture = 0.800, Needle Dry Density = 0.377 cm, Needle Density =  0.8300E+03 needles per cubic meter, Needle Diameter = 0.100 cm, Needle Length = 13.001 cm
+ Branch Dielectric = 28.190 -j 7.830, Branch Density =   4.100 branches per cubic meter, Branch Diameter =  0.700 cm, Branch Length =   0.750 meters
+ **** Backscattering Cross Section - Sigma0 (dB) ****
+   Theta       Total Backscatter   Gnd-Crown-Gnd       Crown-Ground       Ground-Crown       Direct Crown       Trunk-Ground       Ground-Trunk       Direct Ground
+   (deg)          VH      HV         VH      HV         VH      HV         VH      HV         VH      HV         VH      HV         VH      HV         VH      HV
+ 40.000        -22.79   -22.79    -42.92   -42.92    -34.70   -39.11    -39.11   -34.70    -23.51   -23.51    -39.96   -36.69    -37.02   -41.33    -83.52   -83.52
+ 45.000        -22.83   -22.84    -43.82   -43.82    -34.14   -39.99    -39.99   -34.14    -23.49   -23.49    -42.06   -38.09    -38.52   -43.66    -89.94   -89.94

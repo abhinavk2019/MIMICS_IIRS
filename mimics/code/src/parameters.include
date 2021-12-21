@@ -1,0 +1,50 @@
+C***********************************************************************
+C
+C   N_EPS           = NUMBER OF DIELECTRIC CONSTANTS
+C   N_VARIABLES     = NUMBER OF VARIABLES
+C   N_CALLS         = NUMBER OF SUROUTINE CALLS FROM THE MAIN PROGRAM
+C   N_SUB_CALLS      = maximum number of subroutine calls within the 
+C                       subroutines
+C   I_VECT_LEN      = MAXIMUM NUMBER OF LOOK-UP TABLE VALUES
+C   N_SCAT_TERMS    = NUMBER OF SCATTERING TERMS
+C
+
+        INTEGER N_EPS, N_VARIABLES, N_CALLS, I_VECT_LEN, N_SCAT_TERMS
+        INTEGER N_SUB_CALLS
+C
+        PARAMETER(N_EPS = 12, N_VARIABLES = 61, N_CALLS = 4)
+        PARAMETER(I_VECT_LEN = 99, N_SCAT_TERMS = 7, N_SUB_CALLS = 13)
+C
+C***********************************************************************
+C   PARAMETERS DEFINED IN 'READ_CONFIGURE' ROUTINE FROM THE
+C   INPUT FILE '
+C
+C   N_CONSTITUENTS = NUMBER OF CANOPY CONSTITUENTS
+C                    FOR SUBROUTINE 'READ_CONFIGURE'
+C   N_CONST_VARY   = NUMBER OF INTEGRATION VARIABLES FOR THE CONSTITUENT
+C
+        INTEGER N_CONSTITUENTS, N_CONST_VARY
+C
+        PARAMETER(N_CONSTITUENTS = 10, N_CONST_VARY = 1)
+C
+C***********************************************************************
+C
+C  N_ROUGH_SOIL  = MAX NUMBER OF SOIL ROUGHNESS PARAMETERS
+C  N_ENVIRONMENT = MAX NUMBER OF ENVIRONMENT TEMPERATURE PARAMETERS
+C
+        INTEGER  N_ROUGH_SOIL, N_ENVIRONMENT
+C
+        PARAMETER(N_ROUGH_SOIL = 2, N_ENVIRONMENT = 3)
+C
+C***********************************************************************
+C
+C       MAXTRS1,MAXTRS2 = MAXIMUM NUMBER OF INTEGRATION BINS FOR TRUNK
+C                           SIZE PARAMETER INTERGRATRATION
+C       MAXTRDHIST = MAX NUMBER OF BINS FOR TRUNK DIAMETER HISTOGRAM PDF
+C
+        INTEGER MAXTRS1,MAXTRS2,MAXTRDHIST
+C
+        PARAMETER(MAXTRS1 = 100, MAXTRS2 = 100, MAXTRDHIST = 15)
+C
+C***********************************************************************
+

@@ -1,0 +1,36 @@
+ MIMICS Version  1. 5
+
+ ****  Forest Canopy Backscatter Model Output File -- Kappa Matrices of Indiviual Layers ****
+
+ CONSTITUENT ORIENTATION AND SIZE DISTRIBUTIONS:
+   Trunk Orient PDF =  2, Form = (1/0.85903)*COS(THETA_c)**8     Size PDF =  1, Form = HISTOGRAM DATA                
+  Needle Orient PDF =  1, Form = 0.5*SIN(Theta_n) - Uniform      Size PDF =  0, Form = DEFAULT VALUES                
+ Prim Br Orient PDF = 14, Form = (1.23)*SIN(THETA_c+30)**20      Size PDF =  0, Form = DEFAULT VALUES                
+
+
+ Nesting Data:
+  Variable Number =    1
+    Nesting Order =    1
+  Number of Loops =    2
+
+ Family Number     1
+
+ RADAR Look Angle = 40.0 Degrees, Radar Frequency =   1.25 GHz
+ Canopy Density =  0.11 Trees per square meter, Crown Height =  2.00 meters, Trunk Height =  8.00 meters, Vegetation Temperature =  20.00 degrees C.
+ Surface Dielectric =  5.680 -j 1.130, Soil RMS Roughness =  0.45 cm, Soil Correlation Length =  18.75 cm, Model Type = Physical Optics               
+ Trunk Dielectric = 28.190 -j 7.830 Trunk Diameter = 24.000 cm
+ Needle Gravimetric Moisture = 0.800, Needle Dry Density = 0.377 cm, Needle Density =  0.8300E+03 needles per cubic meter, Needle Diameter = 0.100 cm, Needle Length = 13.001 cm
+ Branch Dielectric = 28.190 -j 7.830, Branch Density =   4.100 branches per cubic meter, Branch Diameter =  0.700 cm, Branch Length =   0.750 meters
+ **** Extinction Matrices ****
+   Theta                                              Trunk Layer                                                                                         Crown Layer
+   (deg)                       positive-going                                     negative-going                                    positive-going                                    negative-going
+ 40.000        0.1679E-01  0.0000E+00 -0.4643E-03 -0.7765E-03    0.1679E-01  0.0000E+00 -0.4643E-03 -0.7765E-03    0.2251E-01  0.0000E+00 -0.0000E+00 -0.0000E+00    0.2251E-01  0.0000E+00 -0.0000E+00 -0.0000E+00
+               0.0000E+00  0.1293E-01 -0.4643E-03  0.7765E-03    0.0000E+00  0.1293E-01 -0.4643E-03  0.7765E-03    0.0000E+00  0.2347E-01 -0.0000E+00  0.0000E+00    0.0000E+00  0.2347E-01 -0.0000E+00  0.0000E+00
+              -0.9286E-03 -0.9286E-03  0.1486E-01 -0.3254E-02   -0.9286E-03 -0.9286E-03  0.1486E-01 -0.3254E-02   -0.0000E+00 -0.0000E+00  0.2299E-01 -0.1807E-02   -0.0000E+00 -0.0000E+00  0.2299E-01 -0.1807E-02
+               0.1553E-02 -0.1553E-02  0.3254E-02  0.1486E-01    0.1553E-02 -0.1553E-02  0.3254E-02  0.1486E-01    0.0000E+00 -0.0000E+00  0.1807E-02  0.2299E-01    0.0000E+00 -0.0000E+00  0.1807E-02  0.2299E-01
+
+ 45.000        0.1798E-01  0.0000E+00 -0.4656E-03 -0.7944E-03    0.1798E-01  0.0000E+00 -0.4656E-03 -0.7944E-03    0.2202E-01  0.0000E+00 -0.0000E+00 -0.0000E+00    0.2202E-01  0.0000E+00 -0.0000E+00 -0.0000E+00
+               0.0000E+00  0.1376E-01 -0.4656E-03  0.7944E-03    0.0000E+00  0.1376E-01 -0.4656E-03  0.7944E-03    0.0000E+00  0.2351E-01 -0.0000E+00  0.0000E+00    0.0000E+00  0.2351E-01 -0.0000E+00  0.0000E+00
+              -0.9312E-03 -0.9312E-03  0.1587E-01 -0.3629E-02   -0.9312E-03 -0.9312E-03  0.1587E-01 -0.3629E-02   -0.0000E+00 -0.0000E+00  0.2277E-01 -0.2141E-02   -0.0000E+00 -0.0000E+00  0.2277E-01 -0.2141E-02
+               0.1589E-02 -0.1589E-02  0.3629E-02  0.1587E-01    0.1589E-02 -0.1589E-02  0.3629E-02  0.1587E-01    0.0000E+00 -0.0000E+00  0.2141E-02  0.2277E-01    0.0000E+00 -0.0000E+00  0.2141E-02  0.2277E-01
+

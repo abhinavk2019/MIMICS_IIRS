@@ -1,0 +1,78 @@
+**********************************************************************
+1234567890123456789012345678901234567890123456789012345678901234567890
+**********************************************************************
+** INPUT FILE INDICATING THE NESTING ORDER OF THE CANOPY PARAMETERS **
+** ALSO LISTED IS THE NUMBER ASSIGNED TO EACH PARAMETER             **
+**   FOR IDENTIFICATION PURPOSES IN THE PROGRAM : MIMICS_1_2.FTN    **
+**********************************************************************
+******** NOTE THAT LOWER NUMBERS ARE LOOPED THROUGH FIRST  ***********
+**********************************************************************
+----------------------------------------------------------------------
+PARAMETER            NESTING
+ NUMBER               ORDER
+----------------------------------------------------------------------
+  1  THETA_DEGREES  =   1       radar look angle                    {SENSOR PARAMETERS
+  2  FREQ_GHZ       =   2       radar frequency
+  3  MV_SOIL        =   3       soil volumetric moisture            {GROUND PARAMETERS, also corresponds to soil dielectric
+  4  RMS_SOIL       =   4       surface RMS height
+  5  LS_SOIL        =   5       surface correlation length
+  6  SAND           =   6       soil % sand
+  7  CLAY           =   7       soil % clay
+  8  SALT           =   8       standing water salt content (ppt)
+  9  MG_TRUNK       =   9       gravimetric trunk moisture           {TRUNK PARAMETERS, also corresponds to trunk dielectric
+ 10  DENSITY        =  10       canopy tree density
+ 11  RHO_TRUNK      =  11       dry density of trunk material
+ 12  CROWN_HGHT     =  12       crown layer height
+ 13  TRUNK_DIAM     =  13       trunk diameter
+ 14  TRUNK_HGHT     =  14       trunk layer height
+ 15  MG_LEAF        =  15       gravimetric leaf moisture            {LEAF PARAMETERS, also corresponds to leaf dielectric
+ 16  RHO_LEAF       =  16       dry density of leaf material
+ 17  LEAF_DENS      =  17       leaf number density
+ 18  LEAF_DIAM      =  18       leaf diameter
+ 19  LEAF_TAU       =  19       leaf thickness
+ 20  MG_NDL         =  20       gravimetric needle moisture          {NEEDLE PARAMETERS, also corresponds to needle dielectric
+ 21  RHO_NDL        =  21       dry density of needle material
+ 22  NDL_DENS       =  22       needle number density
+ 23  NDL_DIAM       =  23       needle diameter
+ 24  NDL_LNG        =  24       needle length
+ 25  MG_BR1         =  25       gravimetric branch moisture          {PRIMARY BRANCH PARAMETERS, also corresponds to prim. branch dielectric
+ 26  RHO_BR1        =  26       dry density of branch material       {PRIMARY BRANCH PARAMETERS
+ 27  BR1_DENS       =  22       branch number density                {PRIMARY BRANCH PARAMETERS
+ 28  BR1_DIAM       =  28       branch diameter                      {PRIMARY BRANCH PARAMETERS
+ 29  BR1_LNG        =  29       branch length                        {PRIMARY BRANCH PARAMETERS
+ 30   T_SOIL        =  30       temperature of soil                  {ENVIRONMENT PARAMETERS
+ 31   T_VEG         =  31       temperature of vegetation
+ 32   T_WATER       =  32       temperature of standing water
+ 33  MG_BR2         =  33       gravimetric branch moisture          {SECONDARY BRANCH PARAMETERS, also corresponds to sec. branch dielectric
+ 34  RHO_BR2        =  34       dry density of branch material       {SECONDARY BRANCH PARAMETERS
+ 35  BR2_DENS       =  22       branch number density                {SECONDARY BRANCH PARAMETERS
+ 36  BR2_DIAM       =  36       branch diameter                      {SECONDARY BRANCH PARAMETERS
+ 37  BR2_LNG        =  37       branch length                        {SECONDARY BRANCH PARAMETERS
+ 38  MG_BR3         =  38       gravimetric branch moisture          {3rd BRANCH PARAMETERS, also corresponds to sec. branch dielectric
+ 39  RHO_BR3        =  39       dry density of branch material       {3rd BRANCH PARAMETERS
+ 40  BR3_DENS       =  22       branch number density                {3rd BRANCH PARAMETERS
+ 41  BR3_DIAM       =  41       branch diameter                      {3rd BRANCH PARAMETERS
+ 42  BR3_LNG        =  42       branch length                        {3rd BRANCH PARAMETERS
+ 43  MG_BR3         =  43       gravimetric branch moisture          {3rd BRANCH PARAMETERS, also corresponds to sec. branch dielectric
+ 44  RHO_BR4        =  44       dry density of branch material       {4th BRANCH PARAMETERS
+ 45  BR4_DENS       =  22       branch number density                {4th BRANCH PARAMETERS
+ 46  BR4_DIAM       =  46       branch diameter                      {4th BRANCH PARAMETERS
+ 47  BR4_LNG        =  47       branch length                        {4th BRANCH PARAMETERS
+ 48  MG_BR4         =  48       gravimetric branch moisture          {4th BRANCH PARAMETERS, also corresponds to sec. branch dielectric
+ 49  RHO_BR5        =  49       dry density of branch material       {5th BRANCH PARAMETERS
+ 50  BR5_DENS       =  50       branch number density                {5th BRANCH PARAMETERS
+ 51  BR5_DIAM       =  51       branch diameter                      {5th BRANCH PARAMETERS
+ 52  BR5_LNG        =  52       branch length                        {5th BRANCH PARAMETERS
+ 53  MG_BR5         =  53       gravimetric branch moisture          {5th BRANCH PARAMETERS, also corresponds to sec. branch dielectric
+ 54  RHO_BR6        =  54       dry density of branch material       {6th BRANCH PARAMETERS
+ 55  BR6_DENS       =  55       branch number density                {6th BRANCH PARAMETERS
+ 56  BR6_DIAM       =  56       branch diameter                      {6th BRANCH PARAMETERS
+ 57  BR6_LNG        =  57       branch length                        {6th BRANCH PARAMETERS
+ 58  TRUNK_Dsig     =  58       trunk diameter sigma (standard dev.) {trunk statistics
+ 59  TRUNK_Hsig     =  59       trunk height sigma (standard dev.)   {trunk statistics
+ 60  T_SNOW         =  60       snow layer thickness                 {snow layer parameters
+ 61  eps_SNOW       =  61       snow layer relative dielectric
+
+**********************************************************************
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+**********************************************************************

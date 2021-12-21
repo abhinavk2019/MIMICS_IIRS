@@ -1,0 +1,806 @@
++ gfortran -o mimics1.5 ../data/trunk_hght_f.f ./src/branch_phase.f ./src/crown_layer.f ./src/initialize.f ./src/matrix_ops.f ./src/pdf_setup.f ./src/solve_canopy.f ./src/branch_phase2.f ./src/cyl_size_int.f ./src/leaf_phase.f ./src/pdf_setup2.f ./src/branch_phase3.f ./src/cylinf_sub.f ./src/leaf_po_smat.f ./src/ndl_rlgh_smat.f ./src/pdf_sz_setup.f ./src/stokes_sub.f ./src/branch_phase4.f ./src/dielectric.f ./src/leaf_rlgh_smt.f ./src/needle_phase.f ./src/trunk_layer.f ./src/branch_phase5.f ./src/format_output.f ./src/lngthncyl_smt.f ./src/pd_funcs.f ./src/res_cyl_smat.f ./src/write_data.f ./src/branch_phase6.f ./src/ground_layer.f ./src/logo.f ./src/pd_funcs2.f ./src/snow_layer.f ./src/write_error.f ./src/mimics_1_5a.f ./src/start_loop.f ./src/read_input.f ./src/kappa_mat_sub.f ./src/dbl_cmx_fnct.f ./src/dbl_functions.f ./src/functions.f ./src/naas_subs.f ./src/vector_ops.f
+./src/ground_layer.f:1114.72:
+
+        PAUSE 'Improper type for PO model'                              
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/ground_layer.f:1271.72:
+
+          IF (N.EQ.NMAX) PAUSE 'Not enough terms in SUM for IN'         
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/ground_layer.f:1348.72:
+
+          IF (INT(MU+1.0).GT.NE) PAUSE 'Error in even RKBESL'           
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/ground_layer.f:1351.72:
+
+          IF (INT(MU+0.5).GT.NO) PAUSE 'Error in odd RKBESL'            
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/ground_layer.f:1363.72:
+
+          IF (N.EQ.NMAX) PAUSE 'Not enough terms in SUM for IN'         
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/ground_layer.f:1447.72:
+
+          IF (N.EQ.NMAX) PAUSE 'Not enough terms in SUM for IN'         
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/ground_layer.f:2068.72:
+
+      PAUSE 'Too many steps.'                                           
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/ground_layer.f:2079.72:
+
+        PAUSE 'negative factorial'                                      
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/ground_layer.f:2738.72:
+
+          IF(DEN.EQ.0.)PAUSE                                            
+                                                                        1
+Warning: Deleted feature: PAUSE statement at (1)
+./src/naas_subs.f:383.13:
+
+         DET(2) = CMPLX(0.0E0,0.0E0)                                    
+             1
+Warning: Array reference at (1) is out of bounds (2 > 1) in dimension 1
+./src/naas_subs.f:392.19:
+
+               DET(2) = DET(2) - CMPLX(1.0E0,0.0E0)                     
+                   1
+Warning: Array reference at (1) is out of bounds (2 > 1) in dimension 1
+./src/naas_subs.f:392.28:
+
+               DET(2) = DET(2) - CMPLX(1.0E0,0.0E0)                     
+                            1
+Warning: Array reference at (1) is out of bounds (2 > 1) in dimension 1
+./src/naas_subs.f:397.19:
+
+               DET(2) = DET(2) + CMPLX(1.0E0,0.0E0)                     
+                   1
+Warning: Array reference at (1) is out of bounds (2 > 1) in dimension 1
+./src/naas_subs.f:397.28:
+
+               DET(2) = DET(2) + CMPLX(1.0E0,0.0E0)                     
+                            1
+Warning: Array reference at (1) is out of bounds (2 > 1) in dimension 1
++ ./mimics1.5
+  
+  
+  
+  
+  
+  
+           THE UNIVERSITY OF MICHIGAN COLLEGE OF ENGINEERING
+                        RADIATION LABORATORY
+                        ANN ARBOR, MICHIGAN
+  
+ ***************************************************************************
+ ***************************************************************************
+  
+ MMMM     MMMM  MMMM   MMMM  MMMM MMMM  MMMM   MMMM      MMMM    MMMM   MMMM
+  MM M   M MM    MM   MM  MM  MM   MM    MM   MM  MM    MM  MM    MM M   MM
+  MM  M M  MM    MM  MM       MMMMMMM    MM  MM        MM    MM   MM  M  MM
+  MM   M   MM    MM  MM       MM   MM    MM  MM  MMMM  MMMMMMMM   MM   M MM 
+  MM       MM    MM   MM  MM  MM   MM    MM   MM  MM   MM    MM   MM    MMM
+ MMMM     MMMM  MMMM   MMMM  MMMM MMMM  MMMM   MMMM   MMMM  MMMM MMMM    MMM
+  
+ ***************************************************************************
+ ***************************************************************************
+  
+                Michigan Microwave Canopy Scattering Model
+                               (MIMICS) 
+  
+                          Kyle C. McDonald
+                               and
+              Leland Pierce (lep@kludge.eecs.umich.edu) 
+  
+              MARCH 1993                    VERSION 1.5a
+  
+  
+  
+  
+ I =            1
+  thetac, pdf =    0.00000000       1.16410005    
+  thetac, pdf =    8.72664601E-02   2.25827098    
+  thetac, pdf =   0.174532920       2.05984139    
+  thetac, pdf =   0.261799395       1.76429951    
+  thetac, pdf =   0.349065840       1.41549611    
+  thetac, pdf =   0.436332285       1.05980992    
+  thetac, pdf =   0.523598731      0.736660600    
+  thetac, pdf =   0.610865235      0.471996069    
+  thetac, pdf =   0.698131680      0.276092052    
+  thetac, pdf =   0.785398126      0.145513207    
+  thetac, pdf =   0.872664571       6.78519458E-02
+  thetac, pdf =   0.959931016       2.72742622E-02
+  thetac, pdf =    1.04719758       9.09456611E-03
+  thetac, pdf =    1.13446403       2.36923480E-03
+  thetac, pdf =    1.22173047       4.35949070E-04
+  thetac, pdf =    1.30899692       4.68805156E-05
+  thetac, pdf =    1.39626336       1.92479683E-06
+  thetac, pdf =    1.48352981       7.75162334E-09
+ calling crown_layer
+  Primary branch, resonant =  T
+  branch 1 thetac,pdf =   0.523598790      0.101733863    
+  branch 1 thetac,pdf =   0.541052103      0.123947449    
+  branch 1 thetac,pdf =   0.558505356      0.149813637    
+  branch 1 thetac,pdf =   0.575958669      0.179667681    
+  branch 1 thetac,pdf =   0.593411982      0.213824153    
+  branch 1 thetac,pdf =   0.610865235      0.252561331    
+  branch 1 thetac,pdf =   0.628318548      0.296111852    
+  branch 1 thetac,pdf =   0.645771861      0.344646811    
+  branch 1 thetac,pdf =   0.663225114      0.398262769    
+  branch 1 thetac,pdf =   0.680678427      0.456969827    
+  branch 1 thetac,pdf =   0.698131680      0.520677149    
+  branch 1 thetac,pdf =   0.715584993      0.589187682    
+  branch 1 thetac,pdf =   0.733038306      0.662184536    
+  branch 1 thetac,pdf =   0.750491619      0.739228964    
+  branch 1 thetac,pdf =   0.767944872      0.819756985    
+  branch 1 thetac,pdf =   0.785398185      0.903083026    
+  branch 1 thetac,pdf =   0.802851439      0.988404453    
+  branch 1 thetac,pdf =   0.820304751       1.07480848    
+  branch 1 thetac,pdf =   0.837758064       1.16129005    
+  branch 1 thetac,pdf =   0.855211377       1.24676239    
+  branch 1 thetac,pdf =   0.872664630       1.33009100    
+  branch 1 thetac,pdf =   0.890117943       1.41010392    
+  branch 1 thetac,pdf =   0.907571197       1.48562002    
+  branch 1 thetac,pdf =   0.925024509       1.55548728    
+  branch 1 thetac,pdf =   0.942477822       1.61859965    
+  branch 1 thetac,pdf =   0.959931135       1.67392957    
+  branch 1 thetac,pdf =   0.977384388       1.72055495    
+  branch 1 thetac,pdf =   0.994837642       1.75768280    
+  branch 1 thetac,pdf =    1.01229095       1.78467751    
+  branch 1 thetac,pdf =    1.02974427       1.80106640    
+  branch 1 thetac,pdf =    1.04719758       1.80656171    
+  branch 1 thetac,pdf =    1.06465077       1.80106854    
+  branch 1 thetac,pdf =    1.08210421       1.78468251    
+  branch 1 thetac,pdf =    1.09955740       1.75769198    
+  branch 1 thetac,pdf =    1.11701071       1.72057092    
+  branch 1 thetac,pdf =    1.13446403       1.67395627    
+  branch 1 thetac,pdf =    1.15191734       1.61864352    
+  branch 1 thetac,pdf =    1.16937065       1.55555749    
+  branch 1 thetac,pdf =    1.18682384       1.48573065    
+  branch 1 thetac,pdf =    1.20427728       1.41027355    
+  branch 1 thetac,pdf =    1.22173047       1.33035302    
+  branch 1 thetac,pdf =    1.23918378       1.24715662    
+  branch 1 thetac,pdf =    1.25663710       1.16187346    
+  branch 1 thetac,pdf =    1.27409029       1.07566452    
+  branch 1 thetac,pdf =    1.29154372      0.989641130    
+  branch 1 thetac,pdf =    1.30899692      0.904847205    
+  branch 1 thetac,pdf =    1.32645023      0.822243214    
+  branch 1 thetac,pdf =    1.34390354      0.742690504    
+  branch 1 thetac,pdf =    1.36135685      0.666951478    
+  branch 1 thetac,pdf =    1.37881017      0.595680773    
+  branch 1 thetac,pdf =    1.39626336      0.529425621    
+  branch 1 thetac,pdf =    1.41371667      0.468635321    
+  branch 1 thetac,pdf =    1.43116999      0.413661808    
+  branch 1 thetac,pdf =    1.44862330      0.364775896    
+  branch 1 thetac,pdf =    1.46607661      0.322173566    
+  branch 1 thetac,pdf =    1.48352981      0.285991490    
+  branch 1 thetac,pdf =    1.50098324      0.256318718    
+  branch 1 thetac,pdf =    1.51843643      0.233208075    
+  branch 1 thetac,pdf =    1.53588974      0.216687992    
+  branch 1 thetac,pdf =    1.55334306      0.206772715    
+  branch 1 thetac,pdf =    1.57079637      0.203467488    
+  needle rayleigh =  T
+  thetan, pdf =    4.36332300E-02   4.36193869E-02
+  thetan, pdf =   0.130899698      0.130526200    
+  thetan, pdf =   0.218166143      0.216439605    
+  thetan, pdf =   0.305432618      0.300705791    
+  thetan, pdf =   0.392699063      0.382683426    
+  thetan, pdf =   0.479965508      0.461748570    
+  thetan, pdf =   0.523598790      0.500000000    
+  thetan, pdf =   0.541052103      0.515038133    
+  thetan, pdf =   0.558505356      0.529919267    
+  thetan, pdf =   0.575958669      0.544639051    
+  thetan, pdf =   0.593411982      0.559192955    
+  thetan, pdf =   0.610865235      0.573576450    
+  thetan, pdf =   0.628318548      0.587785244    
+  thetan, pdf =   0.645771861      0.601815045    
+  thetan, pdf =   0.663225114      0.615661502    
+  thetan, pdf =   0.680678427      0.629320383    
+  thetan, pdf =   0.698131680      0.642787576    
+  thetan, pdf =   0.715584993      0.656059027    
+  thetan, pdf =   0.733038306      0.669130623    
+  thetan, pdf =   0.750491619      0.681998372    
+  thetan, pdf =   0.767944872      0.694658399    
+  thetan, pdf =   0.785398185      0.707106769    
+  thetan, pdf =   0.802851439      0.719339788    
+  thetan, pdf =   0.820304751      0.731353700    
+  thetan, pdf =   0.837758064      0.743144870    
+  thetan, pdf =   0.855211377      0.754709601    
+  thetan, pdf =   0.872664630      0.766044438    
+  thetan, pdf =   0.890117943      0.777145982    
+  thetan, pdf =   0.907571197      0.788010716    
+  thetan, pdf =   0.925024509      0.798635542    
+  thetan, pdf =   0.942477822      0.809017003    
+  thetan, pdf =   0.959931135      0.819152057    
+  thetan, pdf =   0.977384388      0.829037547    
+  thetan, pdf =   0.994837642      0.838670552    
+  thetan, pdf =    1.01229095      0.848048091    
+  thetan, pdf =    1.02974427      0.857167304    
+  thetan, pdf =    1.04719758      0.866025448    
+  thetan, pdf =    1.06465077      0.874619663    
+  thetan, pdf =    1.08210421      0.882947624    
+  thetan, pdf =    1.09955740      0.891006529    
+  thetan, pdf =    1.11701071      0.898794055    
+  thetan, pdf =    1.13446403      0.906307817    
+  thetan, pdf =    1.15191734      0.913545489    
+  thetan, pdf =    1.16937065      0.920504868    
+  thetan, pdf =    1.18682384      0.927183867    
+  thetan, pdf =    1.20427728      0.933580458    
+  thetan, pdf =    1.22173047      0.939692616    
+  thetan, pdf =    1.23918378      0.945518553    
+  thetan, pdf =    1.25663710      0.951056540    
+  thetan, pdf =    1.27409029      0.956304729    
+  thetan, pdf =    1.29154372      0.961261690    
+  thetan, pdf =    1.30899692      0.965925813    
+  thetan, pdf =    1.32645023      0.970295727    
+  thetan, pdf =    1.34390354      0.974370062    
+  thetan, pdf =    1.36135685      0.978147626    
+  thetan, pdf =    1.37881017      0.981627166    
+  thetan, pdf =    1.39626336      0.984807730    
+  thetan, pdf =    1.41371667      0.987688363    
+  thetan, pdf =    1.43116999      0.990268052    
+  thetan, pdf =    1.44862330      0.992546141    
+  thetan, pdf =    1.46607661      0.994521916    
+  thetan, pdf =    1.48352981      0.996194720    
+  thetan, pdf =    1.50098324      0.997564077    
+  thetan, pdf =    1.51843643      0.998629510    
+  thetan, pdf =    1.53588974      0.999390841    
+  thetan, pdf =    1.55334306      0.999847710    
+  thetan, pdf =    1.57079637      0.500000000    
+  Secondary branch, resonant =  T
+  branch 2b thetac,pdf =   0.523598790      0.101733863    
+  branch 2b thetac,pdf =   0.541052103      0.123947449    
+  branch 2b thetac,pdf =   0.558505356      0.149813637    
+  branch 2b thetac,pdf =   0.575958669      0.179667681    
+  branch 2b thetac,pdf =   0.593411982      0.213824153    
+  branch 2b thetac,pdf =   0.610865235      0.252561331    
+  branch 2b thetac,pdf =   0.628318548      0.296111852    
+  branch 2b thetac,pdf =   0.645771861      0.344646811    
+  branch 2b thetac,pdf =   0.663225114      0.398262769    
+  branch 2b thetac,pdf =   0.680678427      0.456969827    
+  branch 2b thetac,pdf =   0.698131680      0.520677149    
+  branch 2b thetac,pdf =   0.715584993      0.589187682    
+  branch 2b thetac,pdf =   0.733038306      0.662184536    
+  branch 2b thetac,pdf =   0.750491619      0.739228964    
+  branch 2b thetac,pdf =   0.767944872      0.819756985    
+  branch 2b thetac,pdf =   0.785398185      0.903083026    
+  branch 2b thetac,pdf =   0.802851439      0.988404453    
+  branch 2b thetac,pdf =   0.820304751       1.07480848    
+  branch 2b thetac,pdf =   0.837758064       1.16129005    
+  branch 2b thetac,pdf =   0.855211377       1.24676239    
+  branch 2b thetac,pdf =   0.872664630       1.33009100    
+  branch 2b thetac,pdf =   0.890117943       1.41010392    
+  branch 2b thetac,pdf =   0.907571197       1.48562002    
+  branch 2b thetac,pdf =   0.925024509       1.55548728    
+  branch 2b thetac,pdf =   0.942477822       1.61859965    
+  branch 2b thetac,pdf =   0.959931135       1.67392957    
+  branch 2b thetac,pdf =   0.977384388       1.72055495    
+  branch 2b thetac,pdf =   0.994837642       1.75768280    
+  branch 2b thetac,pdf =    1.01229095       1.78467751    
+  branch 2b thetac,pdf =    1.02974427       1.80106640    
+  branch 2b thetac,pdf =    1.04719758       1.80656171    
+  branch 2b thetac,pdf =    1.06465077       1.80106854    
+  branch 2b thetac,pdf =    1.08210421       1.78468251    
+  branch 2b thetac,pdf =    1.09955740       1.75769198    
+  branch 2b thetac,pdf =    1.11701071       1.72057092    
+  branch 2b thetac,pdf =    1.13446403       1.67395627    
+  branch 2b thetac,pdf =    1.15191734       1.61864352    
+  branch 2b thetac,pdf =    1.16937065       1.55555749    
+  branch 2b thetac,pdf =    1.18682384       1.48573065    
+  branch 2b thetac,pdf =    1.20427728       1.41027355    
+  branch 2b thetac,pdf =    1.22173047       1.33035302    
+  branch 2b thetac,pdf =    1.23918378       1.24715662    
+  branch 2b thetac,pdf =    1.25663710       1.16187346    
+  branch 2b thetac,pdf =    1.27409029       1.07566452    
+  branch 2b thetac,pdf =    1.29154372      0.989641130    
+  branch 2b thetac,pdf =    1.30899692      0.904847205    
+  branch 2b thetac,pdf =    1.32645023      0.822243214    
+  branch 2b thetac,pdf =    1.34390354      0.742690504    
+  branch 2b thetac,pdf =    1.36135685      0.666951478    
+  branch 2b thetac,pdf =    1.37881017      0.595680773    
+  branch 2b thetac,pdf =    1.39626336      0.529425621    
+  branch 2b thetac,pdf =    1.41371667      0.468635321    
+  branch 2b thetac,pdf =    1.43116999      0.413661808    
+  branch 2b thetac,pdf =    1.44862330      0.364775896    
+  branch 2b thetac,pdf =    1.46607661      0.322173566    
+  branch 2b thetac,pdf =    1.48352981      0.285991490    
+  branch 2b thetac,pdf =    1.50098324      0.256318718    
+  branch 2b thetac,pdf =    1.51843643      0.233208075    
+  branch 2b thetac,pdf =    1.53588974      0.216687992    
+  branch 2b thetac,pdf =    1.55334306      0.206772715    
+  branch 2b thetac,pdf =    1.57079637      0.203467488    
+  3rd branch, resonant =  T
+  branch 3a thetac,pdf =    4.36332300E-02   4.36193869E-02
+  branch 3a thetac,pdf =   0.130899698      0.130526200    
+  branch 3a thetac,pdf =   0.218166143      0.216439605    
+  branch 3a thetac,pdf =   0.305432618      0.300705791    
+  branch 3a thetac,pdf =   0.392699063      0.382683426    
+  branch 3a thetac,pdf =   0.479965508      0.461748570    
+  branch 3b thetac,pdf =   0.523598790      0.500000000    
+  branch 3b thetac,pdf =   0.541052103      0.515038133    
+  branch 3b thetac,pdf =   0.558505356      0.529919267    
+  branch 3b thetac,pdf =   0.575958669      0.544639051    
+  branch 3b thetac,pdf =   0.593411982      0.559192955    
+  branch 3b thetac,pdf =   0.610865235      0.573576450    
+  branch 3b thetac,pdf =   0.628318548      0.587785244    
+  branch 3b thetac,pdf =   0.645771861      0.601815045    
+  branch 3b thetac,pdf =   0.663225114      0.615661502    
+  branch 3b thetac,pdf =   0.680678427      0.629320383    
+  branch 3b thetac,pdf =   0.698131680      0.642787576    
+  branch 3b thetac,pdf =   0.715584993      0.656059027    
+  branch 3b thetac,pdf =   0.733038306      0.669130623    
+  branch 3b thetac,pdf =   0.750491619      0.681998372    
+  branch 3b thetac,pdf =   0.767944872      0.694658399    
+  branch 3b thetac,pdf =   0.785398185      0.707106769    
+  branch 3b thetac,pdf =   0.802851439      0.719339788    
+  branch 3b thetac,pdf =   0.820304751      0.731353700    
+  branch 3b thetac,pdf =   0.837758064      0.743144870    
+  branch 3b thetac,pdf =   0.855211377      0.754709601    
+  branch 3b thetac,pdf =   0.872664630      0.766044438    
+  branch 3b thetac,pdf =   0.890117943      0.777145982    
+  branch 3b thetac,pdf =   0.907571197      0.788010716    
+  branch 3b thetac,pdf =   0.925024509      0.798635542    
+  branch 3b thetac,pdf =   0.942477822      0.809017003    
+  branch 3b thetac,pdf =   0.959931135      0.819152057    
+  branch 3b thetac,pdf =   0.977384388      0.829037547    
+  branch 3b thetac,pdf =   0.994837642      0.838670552    
+  branch 3b thetac,pdf =    1.01229095      0.848048091    
+  branch 3b thetac,pdf =    1.02974427      0.857167304    
+  branch 3b thetac,pdf =    1.04719758      0.866025448    
+  branch 3b thetac,pdf =    1.06465077      0.874619663    
+  branch 3b thetac,pdf =    1.08210421      0.882947624    
+  branch 3b thetac,pdf =    1.09955740      0.891006529    
+  branch 3b thetac,pdf =    1.11701071      0.898794055    
+  branch 3b thetac,pdf =    1.13446403      0.906307817    
+  branch 3b thetac,pdf =    1.15191734      0.913545489    
+  branch 3b thetac,pdf =    1.16937065      0.920504868    
+  branch 3b thetac,pdf =    1.18682384      0.927183867    
+  branch 3b thetac,pdf =    1.20427728      0.933580458    
+  branch 3b thetac,pdf =    1.22173047      0.939692616    
+  branch 3b thetac,pdf =    1.23918378      0.945518553    
+  branch 3b thetac,pdf =    1.25663710      0.951056540    
+  branch 3b thetac,pdf =    1.27409029      0.956304729    
+  branch 3b thetac,pdf =    1.29154372      0.961261690    
+  branch 3b thetac,pdf =    1.30899692      0.965925813    
+  branch 3b thetac,pdf =    1.32645023      0.970295727    
+  branch 3b thetac,pdf =    1.34390354      0.974370062    
+  branch 3b thetac,pdf =    1.36135685      0.978147626    
+  branch 3b thetac,pdf =    1.37881017      0.981627166    
+  branch 3b thetac,pdf =    1.39626336      0.984807730    
+  branch 3b thetac,pdf =    1.41371667      0.987688363    
+  branch 3b thetac,pdf =    1.43116999      0.990268052    
+  branch 3b thetac,pdf =    1.44862330      0.992546141    
+  branch 3b thetac,pdf =    1.46607661      0.994521916    
+  branch 3b thetac,pdf =    1.48352981      0.996194720    
+  branch 3b thetac,pdf =    1.50098324      0.997564077    
+  branch 3b thetac,pdf =    1.51843643      0.998629510    
+  branch 3b thetac,pdf =    1.53588974      0.999390841    
+  branch 3b thetac,pdf =    1.55334306      0.999847710    
+  branch 3b thetac,pdf =    1.57079637      0.500000000    
+ 4th branch, resonant =  T
+  branch 4a thetac,pdf =    4.36332300E-02   4.36193869E-02
+  branch 4a thetac,pdf =   0.130899698      0.130526200    
+  branch 4a thetac,pdf =   0.218166143      0.216439605    
+  branch 4a thetac,pdf =   0.305432618      0.300705791    
+  branch 4a thetac,pdf =   0.392699063      0.382683426    
+  branch 4a thetac,pdf =   0.479965508      0.461748570    
+  branch 4b thetac,pdf =   0.523598790      0.500000000    
+  branch 4b thetac,pdf =   0.541052103      0.515038133    
+  branch 4b thetac,pdf =   0.558505356      0.529919267    
+  branch 4b thetac,pdf =   0.575958669      0.544639051    
+  branch 4b thetac,pdf =   0.593411982      0.559192955    
+  branch 4b thetac,pdf =   0.610865235      0.573576450    
+  branch 4b thetac,pdf =   0.628318548      0.587785244    
+  branch 4b thetac,pdf =   0.645771861      0.601815045    
+  branch 4b thetac,pdf =   0.663225114      0.615661502    
+  branch 4b thetac,pdf =   0.680678427      0.629320383    
+  branch 4b thetac,pdf =   0.698131680      0.642787576    
+  branch 4b thetac,pdf =   0.715584993      0.656059027    
+  branch 4b thetac,pdf =   0.733038306      0.669130623    
+  branch 4b thetac,pdf =   0.750491619      0.681998372    
+  branch 4b thetac,pdf =   0.767944872      0.694658399    
+  branch 4b thetac,pdf =   0.785398185      0.707106769    
+  branch 4b thetac,pdf =   0.802851439      0.719339788    
+  branch 4b thetac,pdf =   0.820304751      0.731353700    
+  branch 4b thetac,pdf =   0.837758064      0.743144870    
+  branch 4b thetac,pdf =   0.855211377      0.754709601    
+  branch 4b thetac,pdf =   0.872664630      0.766044438    
+  branch 4b thetac,pdf =   0.890117943      0.777145982    
+  branch 4b thetac,pdf =   0.907571197      0.788010716    
+  branch 4b thetac,pdf =   0.925024509      0.798635542    
+  branch 4b thetac,pdf =   0.942477822      0.809017003    
+  branch 4b thetac,pdf =   0.959931135      0.819152057    
+  branch 4b thetac,pdf =   0.977384388      0.829037547    
+  branch 4b thetac,pdf =   0.994837642      0.838670552    
+  branch 4b thetac,pdf =    1.01229095      0.848048091    
+  branch 4b thetac,pdf =    1.02974427      0.857167304    
+  branch 4b thetac,pdf =    1.04719758      0.866025448    
+  branch 4b thetac,pdf =    1.06465077      0.874619663    
+  branch 4b thetac,pdf =    1.08210421      0.882947624    
+  branch 4b thetac,pdf =    1.09955740      0.891006529    
+  branch 4b thetac,pdf =    1.11701071      0.898794055    
+  branch 4b thetac,pdf =    1.13446403      0.906307817    
+  branch 4b thetac,pdf =    1.15191734      0.913545489    
+  branch 4b thetac,pdf =    1.16937065      0.920504868    
+  branch 4b thetac,pdf =    1.18682384      0.927183867    
+  branch 4b thetac,pdf =    1.20427728      0.933580458    
+  branch 4b thetac,pdf =    1.22173047      0.939692616    
+  branch 4b thetac,pdf =    1.23918378      0.945518553    
+  branch 4b thetac,pdf =    1.25663710      0.951056540    
+  branch 4b thetac,pdf =    1.27409029      0.956304729    
+  branch 4b thetac,pdf =    1.29154372      0.961261690    
+  branch 4b thetac,pdf =    1.30899692      0.965925813    
+  branch 4b thetac,pdf =    1.32645023      0.970295727    
+  branch 4b thetac,pdf =    1.34390354      0.974370062    
+  branch 4b thetac,pdf =    1.36135685      0.978147626    
+  branch 4b thetac,pdf =    1.37881017      0.981627166    
+  branch 4b thetac,pdf =    1.39626336      0.984807730    
+  branch 4b thetac,pdf =    1.41371667      0.987688363    
+  branch 4b thetac,pdf =    1.43116999      0.990268052    
+  branch 4b thetac,pdf =    1.44862330      0.992546141    
+  branch 4b thetac,pdf =    1.46607661      0.994521916    
+  branch 4b thetac,pdf =    1.48352981      0.996194720    
+  branch 4b thetac,pdf =    1.50098324      0.997564077    
+  branch 4b thetac,pdf =    1.51843643      0.998629510    
+  branch 4b thetac,pdf =    1.53588974      0.999390841    
+  branch 4b thetac,pdf =    1.55334306      0.999847710    
+  branch 4b thetac,pdf =    1.57079637      0.500000000    
+ calling solve_canopy
+  
+ I =            2
+  thetac, pdf =    0.00000000       1.16410005    
+  thetac, pdf =    8.72664601E-02   2.25827098    
+  thetac, pdf =   0.174532920       2.05984139    
+  thetac, pdf =   0.261799395       1.76429951    
+  thetac, pdf =   0.349065840       1.41549611    
+  thetac, pdf =   0.436332285       1.05980992    
+  thetac, pdf =   0.523598731      0.736660600    
+  thetac, pdf =   0.610865235      0.471996069    
+  thetac, pdf =   0.698131680      0.276092052    
+  thetac, pdf =   0.785398126      0.145513207    
+  thetac, pdf =   0.872664571       6.78519458E-02
+  thetac, pdf =   0.959931016       2.72742622E-02
+  thetac, pdf =    1.04719758       9.09456611E-03
+  thetac, pdf =    1.13446403       2.36923480E-03
+  thetac, pdf =    1.22173047       4.35949070E-04
+  thetac, pdf =    1.30899692       4.68805156E-05
+  thetac, pdf =    1.39626336       1.92479683E-06
+  thetac, pdf =    1.48352981       7.75162334E-09
+ calling crown_layer
+  Primary branch, resonant =  T
+  branch 1 thetac,pdf =   0.523598790      0.101733863    
+  branch 1 thetac,pdf =   0.541052103      0.123947449    
+  branch 1 thetac,pdf =   0.558505356      0.149813637    
+  branch 1 thetac,pdf =   0.575958669      0.179667681    
+  branch 1 thetac,pdf =   0.593411982      0.213824153    
+  branch 1 thetac,pdf =   0.610865235      0.252561331    
+  branch 1 thetac,pdf =   0.628318548      0.296111852    
+  branch 1 thetac,pdf =   0.645771861      0.344646811    
+  branch 1 thetac,pdf =   0.663225114      0.398262769    
+  branch 1 thetac,pdf =   0.680678427      0.456969827    
+  branch 1 thetac,pdf =   0.698131680      0.520677149    
+  branch 1 thetac,pdf =   0.715584993      0.589187682    
+  branch 1 thetac,pdf =   0.733038306      0.662184536    
+  branch 1 thetac,pdf =   0.750491619      0.739228964    
+  branch 1 thetac,pdf =   0.767944872      0.819756985    
+  branch 1 thetac,pdf =   0.785398185      0.903083026    
+  branch 1 thetac,pdf =   0.802851439      0.988404453    
+  branch 1 thetac,pdf =   0.820304751       1.07480848    
+  branch 1 thetac,pdf =   0.837758064       1.16129005    
+  branch 1 thetac,pdf =   0.855211377       1.24676239    
+  branch 1 thetac,pdf =   0.872664630       1.33009100    
+  branch 1 thetac,pdf =   0.890117943       1.41010392    
+  branch 1 thetac,pdf =   0.907571197       1.48562002    
+  branch 1 thetac,pdf =   0.925024509       1.55548728    
+  branch 1 thetac,pdf =   0.942477822       1.61859965    
+  branch 1 thetac,pdf =   0.959931135       1.67392957    
+  branch 1 thetac,pdf =   0.977384388       1.72055495    
+  branch 1 thetac,pdf =   0.994837642       1.75768280    
+  branch 1 thetac,pdf =    1.01229095       1.78467751    
+  branch 1 thetac,pdf =    1.02974427       1.80106640    
+  branch 1 thetac,pdf =    1.04719758       1.80656171    
+  branch 1 thetac,pdf =    1.06465077       1.80106854    
+  branch 1 thetac,pdf =    1.08210421       1.78468251    
+  branch 1 thetac,pdf =    1.09955740       1.75769198    
+  branch 1 thetac,pdf =    1.11701071       1.72057092    
+  branch 1 thetac,pdf =    1.13446403       1.67395627    
+  branch 1 thetac,pdf =    1.15191734       1.61864352    
+  branch 1 thetac,pdf =    1.16937065       1.55555749    
+  branch 1 thetac,pdf =    1.18682384       1.48573065    
+  branch 1 thetac,pdf =    1.20427728       1.41027355    
+  branch 1 thetac,pdf =    1.22173047       1.33035302    
+  branch 1 thetac,pdf =    1.23918378       1.24715662    
+  branch 1 thetac,pdf =    1.25663710       1.16187346    
+  branch 1 thetac,pdf =    1.27409029       1.07566452    
+  branch 1 thetac,pdf =    1.29154372      0.989641130    
+  branch 1 thetac,pdf =    1.30899692      0.904847205    
+  branch 1 thetac,pdf =    1.32645023      0.822243214    
+  branch 1 thetac,pdf =    1.34390354      0.742690504    
+  branch 1 thetac,pdf =    1.36135685      0.666951478    
+  branch 1 thetac,pdf =    1.37881017      0.595680773    
+  branch 1 thetac,pdf =    1.39626336      0.529425621    
+  branch 1 thetac,pdf =    1.41371667      0.468635321    
+  branch 1 thetac,pdf =    1.43116999      0.413661808    
+  branch 1 thetac,pdf =    1.44862330      0.364775896    
+  branch 1 thetac,pdf =    1.46607661      0.322173566    
+  branch 1 thetac,pdf =    1.48352981      0.285991490    
+  branch 1 thetac,pdf =    1.50098324      0.256318718    
+  branch 1 thetac,pdf =    1.51843643      0.233208075    
+  branch 1 thetac,pdf =    1.53588974      0.216687992    
+  branch 1 thetac,pdf =    1.55334306      0.206772715    
+  branch 1 thetac,pdf =    1.57079637      0.203467488    
+  needle rayleigh =  T
+  thetan, pdf =    4.36332300E-02   4.36193869E-02
+  thetan, pdf =   0.130899698      0.130526200    
+  thetan, pdf =   0.218166143      0.216439605    
+  thetan, pdf =   0.305432618      0.300705791    
+  thetan, pdf =   0.392699063      0.382683426    
+  thetan, pdf =   0.479965508      0.461748570    
+  thetan, pdf =   0.523598790      0.500000000    
+  thetan, pdf =   0.541052103      0.515038133    
+  thetan, pdf =   0.558505356      0.529919267    
+  thetan, pdf =   0.575958669      0.544639051    
+  thetan, pdf =   0.593411982      0.559192955    
+  thetan, pdf =   0.610865235      0.573576450    
+  thetan, pdf =   0.628318548      0.587785244    
+  thetan, pdf =   0.645771861      0.601815045    
+  thetan, pdf =   0.663225114      0.615661502    
+  thetan, pdf =   0.680678427      0.629320383    
+  thetan, pdf =   0.698131680      0.642787576    
+  thetan, pdf =   0.715584993      0.656059027    
+  thetan, pdf =   0.733038306      0.669130623    
+  thetan, pdf =   0.750491619      0.681998372    
+  thetan, pdf =   0.767944872      0.694658399    
+  thetan, pdf =   0.785398185      0.707106769    
+  thetan, pdf =   0.802851439      0.719339788    
+  thetan, pdf =   0.820304751      0.731353700    
+  thetan, pdf =   0.837758064      0.743144870    
+  thetan, pdf =   0.855211377      0.754709601    
+  thetan, pdf =   0.872664630      0.766044438    
+  thetan, pdf =   0.890117943      0.777145982    
+  thetan, pdf =   0.907571197      0.788010716    
+  thetan, pdf =   0.925024509      0.798635542    
+  thetan, pdf =   0.942477822      0.809017003    
+  thetan, pdf =   0.959931135      0.819152057    
+  thetan, pdf =   0.977384388      0.829037547    
+  thetan, pdf =   0.994837642      0.838670552    
+  thetan, pdf =    1.01229095      0.848048091    
+  thetan, pdf =    1.02974427      0.857167304    
+  thetan, pdf =    1.04719758      0.866025448    
+  thetan, pdf =    1.06465077      0.874619663    
+  thetan, pdf =    1.08210421      0.882947624    
+  thetan, pdf =    1.09955740      0.891006529    
+  thetan, pdf =    1.11701071      0.898794055    
+  thetan, pdf =    1.13446403      0.906307817    
+  thetan, pdf =    1.15191734      0.913545489    
+  thetan, pdf =    1.16937065      0.920504868    
+  thetan, pdf =    1.18682384      0.927183867    
+  thetan, pdf =    1.20427728      0.933580458    
+  thetan, pdf =    1.22173047      0.939692616    
+  thetan, pdf =    1.23918378      0.945518553    
+  thetan, pdf =    1.25663710      0.951056540    
+  thetan, pdf =    1.27409029      0.956304729    
+  thetan, pdf =    1.29154372      0.961261690    
+  thetan, pdf =    1.30899692      0.965925813    
+  thetan, pdf =    1.32645023      0.970295727    
+  thetan, pdf =    1.34390354      0.974370062    
+  thetan, pdf =    1.36135685      0.978147626    
+  thetan, pdf =    1.37881017      0.981627166    
+  thetan, pdf =    1.39626336      0.984807730    
+  thetan, pdf =    1.41371667      0.987688363    
+  thetan, pdf =    1.43116999      0.990268052    
+  thetan, pdf =    1.44862330      0.992546141    
+  thetan, pdf =    1.46607661      0.994521916    
+  thetan, pdf =    1.48352981      0.996194720    
+  thetan, pdf =    1.50098324      0.997564077    
+  thetan, pdf =    1.51843643      0.998629510    
+  thetan, pdf =    1.53588974      0.999390841    
+  thetan, pdf =    1.55334306      0.999847710    
+  thetan, pdf =    1.57079637      0.500000000    
+  Secondary branch, resonant =  T
+  branch 2b thetac,pdf =   0.523598790      0.101733863    
+  branch 2b thetac,pdf =   0.541052103      0.123947449    
+  branch 2b thetac,pdf =   0.558505356      0.149813637    
+  branch 2b thetac,pdf =   0.575958669      0.179667681    
+  branch 2b thetac,pdf =   0.593411982      0.213824153    
+  branch 2b thetac,pdf =   0.610865235      0.252561331    
+  branch 2b thetac,pdf =   0.628318548      0.296111852    
+  branch 2b thetac,pdf =   0.645771861      0.344646811    
+  branch 2b thetac,pdf =   0.663225114      0.398262769    
+  branch 2b thetac,pdf =   0.680678427      0.456969827    
+  branch 2b thetac,pdf =   0.698131680      0.520677149    
+  branch 2b thetac,pdf =   0.715584993      0.589187682    
+  branch 2b thetac,pdf =   0.733038306      0.662184536    
+  branch 2b thetac,pdf =   0.750491619      0.739228964    
+  branch 2b thetac,pdf =   0.767944872      0.819756985    
+  branch 2b thetac,pdf =   0.785398185      0.903083026    
+  branch 2b thetac,pdf =   0.802851439      0.988404453    
+  branch 2b thetac,pdf =   0.820304751       1.07480848    
+  branch 2b thetac,pdf =   0.837758064       1.16129005    
+  branch 2b thetac,pdf =   0.855211377       1.24676239    
+  branch 2b thetac,pdf =   0.872664630       1.33009100    
+  branch 2b thetac,pdf =   0.890117943       1.41010392    
+  branch 2b thetac,pdf =   0.907571197       1.48562002    
+  branch 2b thetac,pdf =   0.925024509       1.55548728    
+  branch 2b thetac,pdf =   0.942477822       1.61859965    
+  branch 2b thetac,pdf =   0.959931135       1.67392957    
+  branch 2b thetac,pdf =   0.977384388       1.72055495    
+  branch 2b thetac,pdf =   0.994837642       1.75768280    
+  branch 2b thetac,pdf =    1.01229095       1.78467751    
+  branch 2b thetac,pdf =    1.02974427       1.80106640    
+  branch 2b thetac,pdf =    1.04719758       1.80656171    
+  branch 2b thetac,pdf =    1.06465077       1.80106854    
+  branch 2b thetac,pdf =    1.08210421       1.78468251    
+  branch 2b thetac,pdf =    1.09955740       1.75769198    
+  branch 2b thetac,pdf =    1.11701071       1.72057092    
+  branch 2b thetac,pdf =    1.13446403       1.67395627    
+  branch 2b thetac,pdf =    1.15191734       1.61864352    
+  branch 2b thetac,pdf =    1.16937065       1.55555749    
+  branch 2b thetac,pdf =    1.18682384       1.48573065    
+  branch 2b thetac,pdf =    1.20427728       1.41027355    
+  branch 2b thetac,pdf =    1.22173047       1.33035302    
+  branch 2b thetac,pdf =    1.23918378       1.24715662    
+  branch 2b thetac,pdf =    1.25663710       1.16187346    
+  branch 2b thetac,pdf =    1.27409029       1.07566452    
+  branch 2b thetac,pdf =    1.29154372      0.989641130    
+  branch 2b thetac,pdf =    1.30899692      0.904847205    
+  branch 2b thetac,pdf =    1.32645023      0.822243214    
+  branch 2b thetac,pdf =    1.34390354      0.742690504    
+  branch 2b thetac,pdf =    1.36135685      0.666951478    
+  branch 2b thetac,pdf =    1.37881017      0.595680773    
+  branch 2b thetac,pdf =    1.39626336      0.529425621    
+  branch 2b thetac,pdf =    1.41371667      0.468635321    
+  branch 2b thetac,pdf =    1.43116999      0.413661808    
+  branch 2b thetac,pdf =    1.44862330      0.364775896    
+  branch 2b thetac,pdf =    1.46607661      0.322173566    
+  branch 2b thetac,pdf =    1.48352981      0.285991490    
+  branch 2b thetac,pdf =    1.50098324      0.256318718    
+  branch 2b thetac,pdf =    1.51843643      0.233208075    
+  branch 2b thetac,pdf =    1.53588974      0.216687992    
+  branch 2b thetac,pdf =    1.55334306      0.206772715    
+  branch 2b thetac,pdf =    1.57079637      0.203467488    
+  3rd branch, resonant =  T
+  branch 3a thetac,pdf =    4.36332300E-02   4.36193869E-02
+  branch 3a thetac,pdf =   0.130899698      0.130526200    
+  branch 3a thetac,pdf =   0.218166143      0.216439605    
+  branch 3a thetac,pdf =   0.305432618      0.300705791    
+  branch 3a thetac,pdf =   0.392699063      0.382683426    
+  branch 3a thetac,pdf =   0.479965508      0.461748570    
+  branch 3b thetac,pdf =   0.523598790      0.500000000    
+  branch 3b thetac,pdf =   0.541052103      0.515038133    
+  branch 3b thetac,pdf =   0.558505356      0.529919267    
+  branch 3b thetac,pdf =   0.575958669      0.544639051    
+  branch 3b thetac,pdf =   0.593411982      0.559192955    
+  branch 3b thetac,pdf =   0.610865235      0.573576450    
+  branch 3b thetac,pdf =   0.628318548      0.587785244    
+  branch 3b thetac,pdf =   0.645771861      0.601815045    
+  branch 3b thetac,pdf =   0.663225114      0.615661502    
+  branch 3b thetac,pdf =   0.680678427      0.629320383    
+  branch 3b thetac,pdf =   0.698131680      0.642787576    
+  branch 3b thetac,pdf =   0.715584993      0.656059027    
+  branch 3b thetac,pdf =   0.733038306      0.669130623    
+  branch 3b thetac,pdf =   0.750491619      0.681998372    
+  branch 3b thetac,pdf =   0.767944872      0.694658399    
+  branch 3b thetac,pdf =   0.785398185      0.707106769    
+  branch 3b thetac,pdf =   0.802851439      0.719339788    
+  branch 3b thetac,pdf =   0.820304751      0.731353700    
+  branch 3b thetac,pdf =   0.837758064      0.743144870    
+  branch 3b thetac,pdf =   0.855211377      0.754709601    
+  branch 3b thetac,pdf =   0.872664630      0.766044438    
+  branch 3b thetac,pdf =   0.890117943      0.777145982    
+  branch 3b thetac,pdf =   0.907571197      0.788010716    
+  branch 3b thetac,pdf =   0.925024509      0.798635542    
+  branch 3b thetac,pdf =   0.942477822      0.809017003    
+  branch 3b thetac,pdf =   0.959931135      0.819152057    
+  branch 3b thetac,pdf =   0.977384388      0.829037547    
+  branch 3b thetac,pdf =   0.994837642      0.838670552    
+  branch 3b thetac,pdf =    1.01229095      0.848048091    
+  branch 3b thetac,pdf =    1.02974427      0.857167304    
+  branch 3b thetac,pdf =    1.04719758      0.866025448    
+  branch 3b thetac,pdf =    1.06465077      0.874619663    
+  branch 3b thetac,pdf =    1.08210421      0.882947624    
+  branch 3b thetac,pdf =    1.09955740      0.891006529    
+  branch 3b thetac,pdf =    1.11701071      0.898794055    
+  branch 3b thetac,pdf =    1.13446403      0.906307817    
+  branch 3b thetac,pdf =    1.15191734      0.913545489    
+  branch 3b thetac,pdf =    1.16937065      0.920504868    
+  branch 3b thetac,pdf =    1.18682384      0.927183867    
+  branch 3b thetac,pdf =    1.20427728      0.933580458    
+  branch 3b thetac,pdf =    1.22173047      0.939692616    
+  branch 3b thetac,pdf =    1.23918378      0.945518553    
+  branch 3b thetac,pdf =    1.25663710      0.951056540    
+  branch 3b thetac,pdf =    1.27409029      0.956304729    
+  branch 3b thetac,pdf =    1.29154372      0.961261690    
+  branch 3b thetac,pdf =    1.30899692      0.965925813    
+  branch 3b thetac,pdf =    1.32645023      0.970295727    
+  branch 3b thetac,pdf =    1.34390354      0.974370062    
+  branch 3b thetac,pdf =    1.36135685      0.978147626    
+  branch 3b thetac,pdf =    1.37881017      0.981627166    
+  branch 3b thetac,pdf =    1.39626336      0.984807730    
+  branch 3b thetac,pdf =    1.41371667      0.987688363    
+  branch 3b thetac,pdf =    1.43116999      0.990268052    
+  branch 3b thetac,pdf =    1.44862330      0.992546141    
+  branch 3b thetac,pdf =    1.46607661      0.994521916    
+  branch 3b thetac,pdf =    1.48352981      0.996194720    
+  branch 3b thetac,pdf =    1.50098324      0.997564077    
+  branch 3b thetac,pdf =    1.51843643      0.998629510    
+  branch 3b thetac,pdf =    1.53588974      0.999390841    
+  branch 3b thetac,pdf =    1.55334306      0.999847710    
+  branch 3b thetac,pdf =    1.57079637      0.500000000    
+ 4th branch, resonant =  T
+  branch 4a thetac,pdf =    4.36332300E-02   4.36193869E-02
+  branch 4a thetac,pdf =   0.130899698      0.130526200    
+  branch 4a thetac,pdf =   0.218166143      0.216439605    
+  branch 4a thetac,pdf =   0.305432618      0.300705791    
+  branch 4a thetac,pdf =   0.392699063      0.382683426    
+  branch 4a thetac,pdf =   0.479965508      0.461748570    
+  branch 4b thetac,pdf =   0.523598790      0.500000000    
+  branch 4b thetac,pdf =   0.541052103      0.515038133    
+  branch 4b thetac,pdf =   0.558505356      0.529919267    
+  branch 4b thetac,pdf =   0.575958669      0.544639051    
+  branch 4b thetac,pdf =   0.593411982      0.559192955    
+  branch 4b thetac,pdf =   0.610865235      0.573576450    
+  branch 4b thetac,pdf =   0.628318548      0.587785244    
+  branch 4b thetac,pdf =   0.645771861      0.601815045    
+  branch 4b thetac,pdf =   0.663225114      0.615661502    
+  branch 4b thetac,pdf =   0.680678427      0.629320383    
+  branch 4b thetac,pdf =   0.698131680      0.642787576    
+  branch 4b thetac,pdf =   0.715584993      0.656059027    
+  branch 4b thetac,pdf =   0.733038306      0.669130623    
+  branch 4b thetac,pdf =   0.750491619      0.681998372    
+  branch 4b thetac,pdf =   0.767944872      0.694658399    
+  branch 4b thetac,pdf =   0.785398185      0.707106769    
+  branch 4b thetac,pdf =   0.802851439      0.719339788    
+  branch 4b thetac,pdf =   0.820304751      0.731353700    
+  branch 4b thetac,pdf =   0.837758064      0.743144870    
+  branch 4b thetac,pdf =   0.855211377      0.754709601    
+  branch 4b thetac,pdf =   0.872664630      0.766044438    
+  branch 4b thetac,pdf =   0.890117943      0.777145982    
+  branch 4b thetac,pdf =   0.907571197      0.788010716    
+  branch 4b thetac,pdf =   0.925024509      0.798635542    
+  branch 4b thetac,pdf =   0.942477822      0.809017003    
+  branch 4b thetac,pdf =   0.959931135      0.819152057    
+  branch 4b thetac,pdf =   0.977384388      0.829037547    
+  branch 4b thetac,pdf =   0.994837642      0.838670552    
+  branch 4b thetac,pdf =    1.01229095      0.848048091    
+  branch 4b thetac,pdf =    1.02974427      0.857167304    
+  branch 4b thetac,pdf =    1.04719758      0.866025448    
+  branch 4b thetac,pdf =    1.06465077      0.874619663    
+  branch 4b thetac,pdf =    1.08210421      0.882947624    
+  branch 4b thetac,pdf =    1.09955740      0.891006529    
+  branch 4b thetac,pdf =    1.11701071      0.898794055    
+  branch 4b thetac,pdf =    1.13446403      0.906307817    
+  branch 4b thetac,pdf =    1.15191734      0.913545489    
+  branch 4b thetac,pdf =    1.16937065      0.920504868    
+  branch 4b thetac,pdf =    1.18682384      0.927183867    
+  branch 4b thetac,pdf =    1.20427728      0.933580458    
+  branch 4b thetac,pdf =    1.22173047      0.939692616    
+  branch 4b thetac,pdf =    1.23918378      0.945518553    
+  branch 4b thetac,pdf =    1.25663710      0.951056540    
+  branch 4b thetac,pdf =    1.27409029      0.956304729    
+  branch 4b thetac,pdf =    1.29154372      0.961261690    
+  branch 4b thetac,pdf =    1.30899692      0.965925813    
+  branch 4b thetac,pdf =    1.32645023      0.970295727    
+  branch 4b thetac,pdf =    1.34390354      0.974370062    
+  branch 4b thetac,pdf =    1.36135685      0.978147626    
+  branch 4b thetac,pdf =    1.37881017      0.981627166    
+  branch 4b thetac,pdf =    1.39626336      0.984807730    
+  branch 4b thetac,pdf =    1.41371667      0.987688363    
+  branch 4b thetac,pdf =    1.43116999      0.990268052    
+  branch 4b thetac,pdf =    1.44862330      0.992546141    
+  branch 4b thetac,pdf =    1.46607661      0.994521916    
+  branch 4b thetac,pdf =    1.48352981      0.996194720    
+  branch 4b thetac,pdf =    1.50098324      0.997564077    
+  branch 4b thetac,pdf =    1.51843643      0.998629510    
+  branch 4b thetac,pdf =    1.53588974      0.999390841    
+  branch 4b thetac,pdf =    1.55334306      0.999847710    
+  branch 4b thetac,pdf =    1.57079637      0.500000000    
+ calling solve_canopy
